@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Good...</title>
+    <style>
+        body {
+            background-color: rgb(39, 54, 77);
+            color: white;
+            font: normal 1.4em arial,helvetica, sans-serif;
+            padding-left: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="bom"></h1>
+    <div id="time"></div>
+
+    <script>
+        var b = document.getElementById('bom')
+        var t = document.getElementById('time')
+        var now = new Date()
+        var day = now.getDay()
+        var hora = now.getHours()
+        var minuto = now.getMinutes()
+        var segundo = now.getSeconds()
+
+        if (hora < 12) {
+            b.innerText = (`Bom dia`)
+        } else  if (hora < 18) {
+            b.innerText = (`Boa Tarde`)
+        } else {
+            b.innerText = (`Boa Noite`)
+        }
+
+        t.innerText = ('Hoje é')
+
+        switch (day) {
+            case 0:
+                t.innerText += (' domingo,')
+                break
+            case 1:
+                t.innerText += (' segunda - feira,')
+                break
+            case 2:
+                t.innerText += (' terça - feira,')
+                break
+            case 3:
+                t.innerText += (' quarta - feira,')
+                break
+            case 4:
+                t.innerText += (' quinta - feira,')
+                break
+            case 5:
+                t.innerText += (' sexta - feira,')
+                break
+            case 6:
+                t.innerText += (' sábado,')
+                break
+        }
+        
+        t.innerText += (` e agora são extamente ${hora} horas, ${minuto} minutos e ${segundo} segundos!`)
+    </script>
+</body>
+</html>

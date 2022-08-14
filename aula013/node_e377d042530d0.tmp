@@ -1,0 +1,22 @@
+var k = 1
+while (k <= 6) {
+    console.log(`Are you OK? ${k}`)
+}
+
+/*var k = 1
+while (k <= 6) {
+    console.log('Are you OK?')
+    k++
+} 
+*/
+
+/*
+console.log('Are you Ok?')
+console.log('Are you Ok?')
+console.log('Are you Ok?')
+console.log('Are you Ok?')
+console.log('Are you Ok?')
+console.log('Are you Ok?')
+console.log('Are you Ok?')
+console.log('Are you Ok?')
+*/

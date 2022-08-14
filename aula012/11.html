@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voto</title>
+    <style>
+        body {
+            background-color: rgb(51, 75, 95);
+            color: white;
+            font: normal 2em arial,helvetica,sans-serif;
+            text-align: center;
+        }
+
+        div {
+            text-align: justify;
+            padding-left: 230px;
+        }
+
+        input#idade {
+            width: 80px;
+            background-color: rgb(169, 175, 180);
+        }
+
+        input#con {
+            background-color: rgb(169, 175, 180);
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Eleição</h1>
+    Quantos anos você tem? <input type="number" name="idade" id="idade">
+    <input type="button" value="Confirmar" onclick="clicar()" id="con">
+    <div id="res"></div>
+
+    <script>
+        function clicar() {
+            var i = document.querySelector('input#idade')
+            var r = document.querySelector('div#res')
+            var a = Number(i.value)
+
+            r.innerHTML = (`<p>Você tem ${a} anos de idade.</p>`)
+            if (a < 16) {
+                r.innerHTML += (`<p>Não vota!</p>`)
+            } else if (a < 18 || a > 65) {
+                r.innerHTML += (`<p>Voto opcional!</p>`)
+            } else {
+                r.innerHTML += (`<p>Voto Obrigatório!</p>`)
+            }
+        }
+    </script>
+</body>
+</html>

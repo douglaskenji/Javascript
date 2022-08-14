@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Are you a Brazilian?</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.4em;
+        }
+
+        input {
+            width: 120px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Brazil?</h1>
+    Where are you from? <input type="text" id="pais" >
+    <input type="button" value="verificar" onclick="escrever()">
+    <div id="res"></div>
+
+    <script>
+        function escrever() {
+            var p = document.getElementById('pais')
+            var r = document.getElementById('res')
+            var b = String(p.value)
+
+            if (b != 'Brazil') {
+                res.innerText = `You are a foreigner!`
+            } else {
+                res.innerText = `You are a Brazilian!`
+            }
+        }
+    </script>
+</body>
+</html>

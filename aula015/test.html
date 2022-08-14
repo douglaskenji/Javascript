@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <style>
+        body {
+            background-color: rgb(17, 76, 110);
+            color: white;
+            font: 1.2em arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Rock N' Roll</h1>
+    <div id="s"></div>
+
+    <script>
+        var t = document.getElementById('s')
+        var rock = [' Nirvana', ' AC/DC', ` Guns N' Roses`, ' KISS']
+        rock[4] = ' Metallica'
+        rock.push(' Queen')
+        rock.sort()
+        s.innerHTML = `${rock}`
+    </script>
+</body>
+</html>

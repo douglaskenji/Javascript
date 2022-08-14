@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        body {
+            background-color: rgb(84, 116, 143);
+            color: white;
+            font: normal 2em arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Guns N' Roses</h1>
+    <h3>Welcome to the Jungle</h3>
+    <p>Oh my god
+        Jump</p>
+    <p>Welcome to the jungle, we've got fun and games
+        We got everything you want honey, we know the names
+        We are the people that can find whatever you may need
+        If you got the money, honey, we got your disease</p>
+    <p><strong>DOM JS</strong></p>
+    <div id="gnr">Rocket Queen</div>
+    <script>
+       var p1 = document.getElementsByTagName('p')[0]
+       document.write('Take down to the paradise city ' + p1.innerText)
+       var g = document.getElementById('gnr')
+       g.style.color = 'lightblue'
+       var s = document.querySelector('div#gnr')
+       s.style.background = 'gray'
+    </script>
+</body>
+</html>

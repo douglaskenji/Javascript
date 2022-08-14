@@ -1,0 +1,12 @@
+/*
+var k = 1
+while (k <= 8) {
+    console.log(`${k}`)
+    k++
+}
+*/
+
+var t = 1
+do {
+    console.log(`${t}`)
+} while (t <= 8)
